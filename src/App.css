@@ -1,0 +1,149 @@
+.post {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1800px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-item {
+  flex: 2 1 calc(25% - 1.5rem);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.post-item h1 {
+  font-size: 1.5rem;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+}
+
+.post-item h2 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.post-item p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button.edit {
+  background: #3b82f6;
+  color: #fff;
+}
+
+button.edit:hover {
+  background: #2563eb;
+}
+
+button.delete {
+  background: #ef4444;
+  color: #fff;
+}
+
+button.delete:hover {
+  background: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .post-item {
+    flex: 1 1 calc(50% - 1.5rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .post-item {
+    flex: 1 1 100%;
+  }
+}
+
+.add-post {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Grouped fields */
+.add-post .Title,
+.add-post .body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.add-post label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.add-post input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.add-post input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}
+
+/* Add button */
+button.add {
+  align-self: flex-end;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  background: #10b981;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+button.add:hover {
+  background: #059669;
+}
